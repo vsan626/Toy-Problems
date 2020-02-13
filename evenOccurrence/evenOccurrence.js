@@ -12,4 +12,27 @@
 
 var evenOccurrence = function(arr) {
   // Your code here.
+  var evenCounter = {}
+  for(var i = 0; i < arr.length; i++){
+    var element = arr[i]
+    if(evenCounter[element] === undefined){
+      evenCounter[element] = 1
+    } else {
+      evenCounter[element]++
+    }
+  }
+  var multEvens = []
+  for(var key in evenCounter){
+      if(evenCounter[key] % 2 === 0){
+          multEvens.push(key)
+      }
+  }
+  if(multEvens.length){
+   return multEvens[0]
+  } else {
+      return null
+  }
 };
+
+// var onlyEven = evenOccurrence([1, 7, 2, 4, 5, 6, 8, 9, 6, 4]);
+// console.log(onlyEven); //  4
