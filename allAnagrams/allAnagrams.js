@@ -14,4 +14,17 @@
 
 var allAnagrams = function(string) {
   // Your code here.
+  //make string into an array
+  //iterate over the new array
+  //shuffle each element and push the newly created shuffle into result arr
+  let result = []
+  let strArr = string.split('')
+  if(string.length === 1){
+    return string
+  }
+  
+  
+
 };
+var anagrams = allAnagrams('abc');
+console.log(anagrams);
